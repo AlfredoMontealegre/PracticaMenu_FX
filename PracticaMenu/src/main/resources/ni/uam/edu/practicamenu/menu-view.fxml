@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="mnBar" style="-fx-background-color: #FEC89A; -fx-border-color: #F8EDEB;">
+        <menus>
+          <Menu fx:id="mbArchivo" mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="miNuevo" mnemonicParsing="false" text="Nuevo" />
+                  <MenuItem fx:id="miLimpiar" mnemonicParsing="false" text="Limpiar" />
+                  <MenuItem fx:id="miSalir" mnemonicParsing="false" text="Salir" />
+            </items>
+          </Menu>
+          <Menu fx:id="mbProducto" mnemonicParsing="false" text="Producto">
+            <items>
+              <MenuItem fx:id="miGuardar" mnemonicParsing="false" text="Guardar" />
+                  <MenuItem fx:id="miEditar" mnemonicParsing="false" text="Editar" />
+                  <MenuItem fx:id="miEliminar" mnemonicParsing="false" text="Eliminar" />
+            </items>
+          </Menu>
+          <Menu fx:id="mbAyuda" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="miAcerca" mnemonicParsing="false" text="Acerca de..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: #FFB5A7;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@logoUAM.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="61.0" prefWidth="393.0" text="Distribuidora el Gueguense" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="42.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <ToolBar prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: #F9DCC4;">
+        <items>
+          <Button fx:id="btnNuevoProducto" mnemonicParsing="false" text="Nuevo" />
+            <Button fx:id="btnGuardarProducto" mnemonicParsing="false" text="Guardar" />
+            <Button fx:id="btnEditarProducto" mnemonicParsing="false" text="Editar" />
+            <Button fx:id="btnEliminarProducto" mnemonicParsing="false" text="Eliminar" />
+        </items>
+      </ToolBar>
+      <HBox prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #F8edeb;">
+         <children>
+            <Label text="ID del Producto:">
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtID">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="13.0" text="Nombre del Producto:">
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="15.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtNombre" layoutX="120.0" layoutY="18.0" promptText="ej: Mascara">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="3.0" />
+         </padding></HBox>
+      <HBox layoutX="10.0" layoutY="135.0" prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #F8edeb;">
+         <children>
+            <Label text="Precio:">
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtPrecio" promptText="ej: 200">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="13.0" text="Categoria:">
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="15.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtCategoria" layoutX="120.0" layoutY="18.0" promptText="ej: Artistico">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets top="3.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="tblProductos" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colCategoria" prefWidth="75.0" text="Categoria" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
